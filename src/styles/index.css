@@ -97,3 +97,27 @@
     color: white;
     text-align: center;
 }
+
+.projects-header {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: 600;
+    color: white;
+    cursor: default;
+}
+
+.project {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: 400;
+    color: white;
+    padding-bottom: 0.5em;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+
+.project:hover {
+    background-color: #333;
+}
