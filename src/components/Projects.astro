@@ -1,56 +1,25 @@
-<div class="projects-header project-typing">
-    My Projects
+<div class="projects-group">
+    <div class="projects-header" onclick="docs()" >
+        My Projects
+    </div>
 </div>
 
-<div style="height: 1em;" />
-
-<div class="project project-typing" onclick="dm()" >Daylin Microservices</div>
-<div class="project project-typing" onclick="forte()" >Forte Engine</div>
-<div class="project project-typing" onclick="ne()" >Nebulous Engine</div>
-<div class="project project-typing" onclick="meld()" >Meld</div>
-<div class="project project-typing" onclick="cubic()" >Cubic</div>
-<div class="project project-typing" onclick="exp()" >Experiments</div>
-
 <script type="application/javascript">
-    function dm() { console.log("TODO to docs!") }
-    function forte() { console.log("TODO to docs!") }
-    function ne() { console.log("TODO to docs!") }
-    function meld() { console.log("TODO to docs!") }
-    function cubic() { console.log("TODO to docs!") }
-    function exp() { console.log("TODO to docs!") }
+    function docs() { console.log("TODO goto projects!"); }
 </script>
+
+
+<!-- fade in projects button -->
 <script>
-    // setup
-    let tick = 0;
-    let waitTicks = 100;
-    let typeTicks = 30;
-
-    // get nametags and their target texts
-    let nametags = window.document.getElementsByClassName("project-typing") as HTMLDivElement[];
-    let targetTexts = [];
-    for (var i = 0; i < nametags.length; i++) {
-        targetTexts.push(nametags[i].textContent!!);
-        nametags[i].textContent = "";
-    }
-
-    // start looping
-    let interval = setInterval(function() {
-        // do initial ticking like its about to starting typing
-        if (tick <= waitTicks) {}
-        // do typing
-        else if (tick <= typeTicks + waitTicks) {
-            let progress = (tick - waitTicks) / typeTicks;
-            for (var i = 0; i < targetTexts.length; i++) {
-                nametags[i].textContent = targetTexts[i].slice(0, Math.ceil(targetTexts[i].length * progress));
+    let element = window.document.getElementsByClassName("projects-group")[0] as HTMLDivElement;
+    element.style.opacity = "0";
+    setTimeout(function() {
+        let interval = setInterval(function() {
+            let opacity = parseFloat(element.style.opacity) + 0.01;
+            element.style.opacity = opacity.toString();
+            if (opacity >= 1.0) {
+                clearInterval(interval);
             }
-        } 
-        // make this animation end
-        else if (tick > typeTicks + waitTicks) {
-            for (var i = 0; i < targetTexts.length; i++) {
-                nametags[i].textContent = targetTexts[i];
-            }
-            clearInterval(interval);
-        }
-        tick++;
-    }, 100);
+        }, 10);
+    }, 6000);
 </script>
