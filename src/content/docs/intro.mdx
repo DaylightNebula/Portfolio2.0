@@ -4,14 +4,17 @@ description: Welcome to my projects!
 sidebar:
   order: 0
 ---
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, Card, Icon, CardGrid } from '@astrojs/starlight/components';
+import DaylinMicroCard from "../../components/cards/DaylinMicroCard.astro";
 
 Hi, my name is Noah Shaw.  I work on tons of various server back-end tools, game tools, and Minecraft server related projects.  Here are some of the projects and experiments I am most proud of.
 
 ## Projects
 
 <CardGrid>
-    <LinkCard title="Daylin Microservices" href="https://google.com" />
+    <Card title="Daylin Microservices" href="https://google.com">
+      <DaylinMicroCard/>
+    </Card>
     <LinkCard title="Forte Engine" href="https://google.com" />
     <LinkCard title="Nebulous Engine" href="https://google.com" />
     <LinkCard title="Meld" href="https://google.com" />
