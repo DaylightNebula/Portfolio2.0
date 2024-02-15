@@ -7,6 +7,10 @@ sidebar:
 import { LinkCard, Card, Icon, CardGrid } from '@astrojs/starlight/components';
 import DaylinMicroCard from "../../components/cards/DaylinMicroCard.astro";
 import ForteCard from "../../components/cards/ForteCard.astro";
+import NebulousEngine from "../../components/cards/NebulousEngine.astro";
+import MeldCard from "../../components/cards/MeldCard.astro";
+import CubicCard from "../../components/cards/CubicCard.astro";
+import PRPGTCard from "../../components/cards/PRPGTCard.astro";
 
 Hi, my name is Noah Shaw.  I work on tons of various server back-end tools, game tools, and Minecraft server related projects.  Here are some of the projects and experiments I am most proud of.
 
@@ -19,10 +23,18 @@ Hi, my name is Noah Shaw.  I work on tons of various server back-end tools, game
     <Card title="Forte Engine">
       <ForteCard/>
     </Card>
-    <LinkCard title="Nebulous Engine" href="https://google.com" />
-    <LinkCard title="Meld" href="https://google.com" />
-    <LinkCard title="Cubic" href="https://google.com" />
-    <LinkCard title="Paper RPG Toolkit" href="https://google.com" />
+    <Card title="Nebulous Engine">
+      <NebulousEngine/>
+    </Card>
+    <Card title="Meld">
+      <MeldCard/>
+    </Card>
+    <Card title="Cubic">
+      <CubicCard/>
+    </Card>
+    <Card title="Paper RPG Toolkit">
+      <PRPGTCard/>
+    </Card>
 </CardGrid>
 
 ## Experiments
