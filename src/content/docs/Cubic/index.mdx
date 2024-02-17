@@ -1,6 +1,8 @@
 ---
 title: Cubic
 ---
+import { LinkCard, Card, Icon, CardGrid } from '@astrojs/starlight/components';
+
 Cubic is a work in progress mod designed to expand the possibilities of using Minecraft as a game engine by allowing mods to use custom servers (or even custom server implementations) as worlds to effectively "replace" Minecrafts core.
 Since Minecraft is server authoritative, this means we can replace large amounts of Minecrafts core logic with our own logic.
 
@@ -36,3 +38,5 @@ No longer would we need to rely on modifying the games source code, or use Mojan
 Since the game servers would no longer need to modify client source code to add custom features or inject themselves into the client, we can create a safer, less intrusive system for our players.\
 
 Updating mods would also be easier as this mod API would be platform agnostic so that when Mojang updates, only the API would need an update, not the mods.
+
+<LinkCard title="GitHub" href="https://github.com/DaylightNebula/Cubic.git" />
