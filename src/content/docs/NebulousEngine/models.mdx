@@ -43,10 +43,10 @@ The `Animator` component uses a `StateMachine` to control the animations of a `G
 To create an `Animator` you can do this:
 ```rust
 let animator = Animator {
-    handle: /* Handle<StateMachine> */,         // A handle to the statemachine to use.
+    handle: /* Handle<StateMachine> */,         // A handle to the state machine to use.
     current_animation: /* Option<String> */,    // The current animation, you can usually set this to None when creating an Animator
-    triggers: /* Vec<String> */,                // The triggers currently being called on the animators statemachine.  See the StateMachine documentation for more info.
-    values: /* HashMap<String, f32> */          // The values currently being applied to the animators statemachine.  See the StateMachine documentation for more info.
+    triggers: /* Vec<String> */,                // The triggers currently being called on the animators state machine.  See the StateMachine documentation for more info.
+    values: /* HashMap<String, f32> */          // The values currently being applied to the animators state machine.  See the StateMachine documentation for more info.
 };
 ```
 

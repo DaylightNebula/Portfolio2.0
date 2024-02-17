@@ -7,10 +7,10 @@ Cubic is a work in progress mod designed to expand the possibilities of using Mi
 Since Minecraft is server authoritative, this means we can replace large amounts of Minecrafts core logic with our own logic.
 
 Here are some examples of what may now be possible:
- - Abandon the 20 ticks per second limit impossed by Mojang.
- - Replace ineffecient parts of Mojangs code like the light engine, for example (Minecraft does block light calculations on the server for some reason).
+ - Abandon the 20 ticks per second limit imposed by Mojang.
+ - Replace inefficient parts of Mojangs code like the light engine, for example (Minecraft does block light calculations on the server for some reason).
  - Make how water flows more realistic.
- - Use more effecient server implementations to save on memory and CPU resources.
+ - Use more efficient server implementations to save on memory and CPU resources.
  - Custom server implementations can have custom physics that would allow for things like custom vehicles, for example, without having to hack the Mojang physics engine.
  - We can write our open modding APIs from scratch and not have to abide by the mess that Mojang blesses us with.
  - Import custom assets at runtime, so if a player changes the game they are playing, we do not need to restart the client, we can just load a different set of assets.
@@ -19,7 +19,7 @@ Here are some examples of what may now be possible:
 
 ## What we have
 Right now, Cubic only allows players to create a new game from a template that they have already copied into cubics templates folder.  When the player starts a game, the server is started, after which the player joins the server.
-The server and client both have a HTTP server that they use to communicate with eachother.  They will occasionally ping eachother, and when a game server starts, it tells the clients HTTP server that it is loaded and ready for the player to connect.
+The server and client both have a HTTP server that they use to communicate with each other.  They will occasionally ping each other, and when a game server starts, it tells the clients HTTP server that it is loaded and ready for the player to connect.
 
 ## What we could do
 ### Custom Game Mode via Custom Server Implementations

@@ -18,7 +18,7 @@ enum TestLevels {
 ```
 
 ## The Levels Plugin
-The `Levels` plugin is a Bevy plugin that handles your levels.  The plugin takes the enum created above and initializes an instance of the `Level` resource to assist in managing the current level, as well as, handles despawning any level-specific entities on a level change.
+The `Levels` plugin is a Bevy plugin that handles your levels.  The plugin takes the enum created above and initializes an instance of the `Level` resource to assist in managing the current level, as well as, handles de-spawning any level-specific entities on a level change.
 
 Heres how to use this with the `TestLevels` enum created above:
 ```rust
@@ -64,7 +64,7 @@ fn start_a(
 
 ## The Current Level Component
 The `CurrentLevel` component marks an entity as belonging to the current level.  The `add` and `spawn` functions mentioned in the previous section adds this component to those entities.  
-When a level changes, any entity marked with the `CurrentLevel` component will be despawned.
+When a level changes, any entity marked with the `CurrentLevel` component will be de-spawned.
 
 Heres an example:
 ```rust

@@ -5,7 +5,7 @@ import { LinkCard, Card, Icon, CardGrid } from '@astrojs/starlight/components';
 
 Daylin Microservices is a family of libraries designed to aid in the creation of Microservices.  
 Daylin Microservices uses Ktor to create an HTTP server to create all microservice endpoints and uses JSON to communicate.
-So that services can see eachother, created services automatically connect to a Consul instance with some information given in the config.
+So that services can see each other, created services automatically connect to a Consul instance with some information given in the config.
 
 ## Creating a Microservice
 Microservices can quickly be created using just a microservice config (described below) and a hashmap of endpoints (also described below).  All they will do is connect consul and then respond to those endpoints until their dispose function is called or the application is shutdown.  Microservices do not keep their program alive by themselves and will shutdown if the main thread stops.
@@ -79,7 +79,7 @@ Here is an example endpoint that returns a json object with "hi" set to true if 
 </CardGrid>
 
 ## Including in a Project
-Add jitpack to your repositories list.
+Add JitPack to your repositories list.
 ```kotlin
 repositories {
   maven("https://jitpack.io/")
@@ -90,9 +90,6 @@ Then add this to your dependencies list.
 ```kotlin
 dependencies {
   implementation("com.github.DaylightNebula.DaylinMicroservices:DaylinMicroservices-Core:0.4.4")
-  // 0.4.4 may need to be changed to the lastest version in case I forgot to update this readme file.
-  // you can also use master-SNAPSHOT as the version if you are feeling brave. 
-  // However, I use master as my development branch so use at your own risk.
 }
 ```
 

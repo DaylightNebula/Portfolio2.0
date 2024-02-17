@@ -23,7 +23,7 @@ This tells the entity to stay a given point.
 ```json
 {
     "type": "stay",
-    "world": 0,                     // The dimension in which the entity should stay.  By default this is 0 or the overworld.
+    "world": 0,                     // The dimension in which the entity should stay.  By default this is 0 or the over world.
     "location": [60.0, 40.0, 60.0]  // The location in which the entity should stay at.
 }
 ```
@@ -34,7 +34,7 @@ This tells the entity to wander near a given point.
 ```json
 {
     "type": "wander",
-    "world": 0,                     // The dimension in which the entity is present.  By default this is 0 or the overworld.
+    "world": 0,                     // The dimension in which the entity is present.  By default this is 0 or the over world.
     "location": [60.0, 40.0, 60.0], // The location in which the entity should wander near.
     "range": 10,                    // The distance in which the entity should wander in.
     "forceWhenOutOfRange": true     // Tells PaperRPGToolkit whether it should force this task to override all other tasks when the entity is out of the range given above.

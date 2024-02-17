@@ -26,7 +26,7 @@ The `SchemaElement` provides us with a view options for what we can place in the
  * `SchemaElement.String()` - A string must be at the given location.
  * `SchemaElement.Data()` - A byte array must be at the given location.
  * `SchemaElement.List(subElementKey: SchemaElement)` - A list must be at this location where the elements of the list must match the `SchemaElement` given as `subElementKey`.
- * `SchemaElement.Array(subElementKey: SchemaElement, size: Int)` - An array of the given size must be at this location where the elements of the aray must match the `SchemaElement` given as `subElementKey`.
+ * `SchemaElement.Array(subElementKey: SchemaElement, size: Int)` - An array of the given size must be at this location where the elements of the array must match the `SchemaElement` given as `subElementKey`.
  * `SchemaElement.Object(schema: Schema)` - A JSON object must be at the given location that matches the given schema.
  * `SchemaElement.Default(val schema: SchemaElement, val default: Any)` - An element may be given at this location that matches the `SchemaElement` given as `schema`.  But if that element is not present, the given default will be put in its place instead.
  * `SchemaElement.Optional(val schema: SchemaElement)` - An element may be given at this location that matches the `SchemaElement` given as `schema.  If the element is not present, nothing will be put in its place.
@@ -76,7 +76,7 @@ val service = Microservice(
 ```
 
 ## Including in a Project
-Add jitpack to your repositories list.
+Add JitPack to your repositories list.
 ```kotlin
 repositories {
   maven("https://jitpack.io/")
@@ -87,8 +87,5 @@ Then add this to your dependencies list.
 ```kotlin
 dependencies {
   implementation("com.github.DaylightNebula.DaylinMicroservices:DaylinMicroservices-Serializables:0.4.4")
-  // 0.4.4 may need to be changed to the lastest version in case I forgot to update this readme file.
-  // you can also use master-SNAPSHOT as the version if you are feeling brave. 
-  // However, I use master as my development branch so use at your own risk.
 }
 ```
